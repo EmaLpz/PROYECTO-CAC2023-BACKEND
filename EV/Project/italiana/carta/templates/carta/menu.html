@@ -1,0 +1,22 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+
+    <main>
+        <section class="animate__animated animate__backInUp" id="seccion1menu">
+            <h2>Nuestras Variedades</h2>
+        </section>
+        <section class="animate__animated animate__backInUp" id="seccionMenu">
+            {% for project in projects %}
+            <article class="cajaComidas">
+                <img src="{{project.imagen.url}}" alt="Foto de {{project.title}}" class="imgComidas">
+                <div>
+                    <h3>{{project.title}}</h3>
+                    <p>{{project.descripcion}}</p>
+                </div>
+            </article>
+            {% endfor %}
+        </section>
+    </main>
+
+{% endblock %}
